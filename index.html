@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran DANA & GOPAY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+        
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .payment-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .payment-method {
+            flex: 1;
+            min-width: 300px;
+            padding: 25px;
+            border-right: 1px solid #eee;
+        }
+        
+        .payment-method:last-child {
+            border-right: none;
+        }
+        
+        .method-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            color: #2575fc;
+        }
+        
+        .method-title i {
+            font-size: 28px;
+            margin-right: 15px;
+        }
+        
+        .method-title h2 {
+            font-size: 22px;
+        }
+        
+        .account-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 4px solid #6a11cb;
+        }
+        
+        .account-info p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+        
+        .account-number {
+            font-size: 22px !important;
+            font-weight: bold;
+            color: #2575fc;
+            letter-spacing: 1.5px;
+            margin: 15px 0 !important;
+        }
+        
+        .instructions {
+            margin-top: 25px;
+        }
+        
+        .instructions h3 {
+            margin-bottom: 15px;
+            color: #2575fc;
+            font-size: 18px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .note {
+            background: #fff4e6;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #ffa94d;
+            font-size: 14px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            padding: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-copy {
+            background: #6a11cb;
+            color: white;
+        }
+        
+        .btn-copy:hover {
+            background: #5a0fb8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #20bd5c;
+            transform: translateY(-2px);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .payment-method {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .payment-method:last-child {
+                border-bottom: none;
+            }
+            
+            header h1 {
+                font-size: 24px;
+            }
+            
+            .account-number {
+                font-size: 18px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pembayaran DANA & GOPAY</h1>
+            <p>Gunakan salah satu metode pembayaran di bawah untuk transfer</p>
+        </header>
+        
+        <div class="payment-container">
+            <div class="payment-method">
+                <div class="method-title">
+                    <i class="fas fa-wallet"></i>
+                    <h2>DANA</h2>
+                </div>
+                
+                <div class="account-info">
+                    <p>Nomor Telepon DANA:</p>
+                    <p class="account-number">085373543659</p>
+                    <p>a.n. CSS Smith</p>
+                </div>
+                
+                <div class="instructions">
+                    <h3>Cara Pembayaran:</h3>
+                    <ol>
+                        <li>Buka aplikasi DANA di smartphone Anda</li>
+                        <li>Pilih menu "Kirim"</li>
+                        <li>Masukkan nomor 085373543659</li>
+                        <li>Masukkan jumlah transfer</li>
+                        <li>Konfirmasi dan masukkan PIN DANA Anda</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="payment-method">
+                <div class="method-title">
+                    <i class="fab fa-google-wallet"></i>
+                    <h2>GOPAY</h2>
+                </div>
+                
+                <div class="account-info">
+                    <p>Nomor Telepon GOPAY:</p>
+                    <p class="account-number">085373543659</p>
+                    <p>a.n. CSS Smith</p>
+                </div>
+                
+                <div class="instructions">
+                    <h3>Cara Pembayaran:</h3>
+                    <ol>
+                        <li>Buka aplikasi Gojek di smartphone Anda</li>
+                        <li>Pilih menu "Bayar" atau "GoPay"</li>
+                        <li>Pilih "Kirim" kemudian "Ke Teman"</li>
+                        <li>Masukkan nomor 085373543659</li>
+                        <li>Masukkan jumlah transfer dan konfirmasi</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <div class="note">
+            <p><strong>Catatan:</strong> Setelah melakukan pembayaran, harap konfirmasi dengan mengirimkan bukti transfer melalui WhatsApp. Terima kasih!</p>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="btn btn-copy" onclick="copyNumber()">
+                <i class="fas fa-copy"></i> Salin Nomor
+            </button>
+            <button class="btn btn-whatsapp" onclick="openWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Hubungi WhatsApp
+            </button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 CSS Smith Payment Page. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function copyNumber() {
+            const textArea = document.createElement("textarea");
+            textArea.value = "085373543659";
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("Copy");
+            textArea.remove();
+            
+            alert("Nomor 085373543659 berhasil disalin!");
+        }
+        
+        function openWhatsApp() {
+            window.open("https://wa.me/6285373543659", "_blank");
+        }
+    </script>
+</body>
+</html>
